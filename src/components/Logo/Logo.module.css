@@ -23,7 +23,7 @@
 }
 
 @media (pointer: fine) and (max-width: 35rem) {
-  .wrapper[data-mobile-alignment='center']:hover {
+  .wrapper[data-mobile-alignment="center"]:hover {
     transform: translateX(0px);
   }
 }

@@ -1,7 +1,7 @@
-import React from 'react';
-import clsx from 'clsx';
+import React from "react";
+import clsx from "clsx";
 
-import styles from './Slider.module.css';
+import styles from "./Slider.module.css";
 
 function Slider({ className, ...delegated }) {
   return (

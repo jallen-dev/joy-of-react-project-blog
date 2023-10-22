@@ -1,20 +1,16 @@
-import React from 'react';
-import clsx from 'clsx';
-import {
-  Play,
-  Pause,
-  RotateCcw,
-} from 'react-feather';
+import React from "react";
+import clsx from "clsx";
+import { Play, Pause, RotateCcw } from "react-feather";
 
-import Card from '@/components/Card';
-import VisuallyHidden from '@/components/VisuallyHidden';
+import Card from "@/components/Card";
+import VisuallyHidden from "@/components/VisuallyHidden";
 
-import styles from './CircularColorsDemo.module.css';
+import styles from "./CircularColorsDemo.module.css";
 
 const COLORS = [
-  { label: 'red', value: 'hsl(348deg 100% 60%)' },
-  { label: 'yellow', value: 'hsl(50deg 100% 55%)' },
-  { label: 'blue', value: 'hsl(235deg 100% 65%)' },
+  { label: "red", value: "hsl(348deg 100% 60%)" },
+  { label: "yellow", value: "hsl(50deg 100% 55%)" },
+  { label: "blue", value: "hsl(235deg 100% 65%)" },
 ];
 
 function CircularColorsDemo() {
@@ -29,34 +25,21 @@ function CircularColorsDemo() {
     <Card as="section" className={styles.wrapper}>
       <ul className={styles.colorsWrapper}>
         {COLORS.map((color, index) => {
-          const isSelected =
-            color.value === selectedColor.value;
+          const isSelected = color.value === selectedColor.value;
 
           return (
-            <li
-              className={styles.color}
-              key={index}
-            >
-              {isSelected && (
-                <div
-                  className={
-                    styles.selectedColorOutline
-                  }
-                />
-              )}
+            <li className={styles.color} key={index}>
+              {isSelected && <div className={styles.selectedColorOutline} />}
               <div
                 className={clsx(
                   styles.colorBox,
-                  isSelected &&
-                    styles.selectedColorBox
+                  isSelected && styles.selectedColorBox
                 )}
                 style={{
                   backgroundColor: color.value,
                 }}
               >
-                <VisuallyHidden>
-                  {color.label}
-                </VisuallyHidden>
+                <VisuallyHidden>{color.label}</VisuallyHidden>
               </div>
             </li>
           );

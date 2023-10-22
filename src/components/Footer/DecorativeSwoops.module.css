@@ -35,6 +35,6 @@
   stroke-width: var(--stroke-width);
 }
 
-html[data-color-theme='dark'] .wrapper {
+html[data-color-theme="dark"] .wrapper {
   --stroke-color: var(--color-decorative-300);
 }

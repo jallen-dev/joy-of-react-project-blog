@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import styles from './DecorativeSwoops.module.css';
+import styles from "./DecorativeSwoops.module.css";
 
 function DecorativeSwoops() {
   return (

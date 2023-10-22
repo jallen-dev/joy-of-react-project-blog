@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-import Logo from '@/components/Logo';
+import Logo from "@/components/Logo";
 
-import DecorativeSwoops from './DecorativeSwoops';
-import styles from './Footer.module.css';
+import DecorativeSwoops from "./DecorativeSwoops";
+import styles from "./Footer.module.css";
 
 function Footer() {
   return (
@@ -20,16 +20,10 @@ function Footer() {
             for more information.
           */}
           <p className={styles.attribution}>
-            Blog template created by{' '}
-            <a href="https://www.joshwcomeau.com/">
-              Josh W. Comeau
-            </a>
-            . Check out{' '}
-            <a href="https://www.joyofreact.com/">
-              The Joy of React
-            </a>{' '}
-            to learn how to build dynamic React apps like
-            this one!
+            Blog template created by{" "}
+            <a href="https://www.joshwcomeau.com/">Josh W. Comeau</a>. Check out{" "}
+            <a href="https://www.joyofreact.com/">The Joy of React</a> to learn
+            how to build dynamic React apps like this one!
           </p>
         </div>
         <nav>
@@ -45,9 +39,7 @@ function Footer() {
               <Link href="/todo">Privacy Policy</Link>
             </li>
             <li>
-              <a href="https://twitter.com/JoshWComeau">
-                Twitter
-              </a>
+              <a href="https://twitter.com/JoshWComeau">Twitter</a>
             </li>
           </ul>
         </nav>

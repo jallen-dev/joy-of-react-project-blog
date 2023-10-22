@@ -1,7 +1,7 @@
-import React from 'react';
-import { Loader } from 'react-feather';
+import React from "react";
+import { Loader } from "react-feather";
 
-import styles from './Spinner.module.css';
+import styles from "./Spinner.module.css";
 
 const Spinner = ({ color, size }) => {
   return (
