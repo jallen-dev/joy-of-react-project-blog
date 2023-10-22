@@ -1,5 +1,6 @@
 import React from "react";
 import dynamic from "next/dynamic";
+import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 import BlogHero from "@/components/BlogHero";
@@ -10,6 +11,9 @@ import styles from "./postSlug.module.css";
 
 export async function generateMetadata({ params }) {
   const blogPost = await loadBlogPost(params.postSlug);
+  if (!blogPost) {
+    notFound();
+  }
 
   return {
     title: blogPost.frontmatter.title,
@@ -25,6 +29,9 @@ const components = {
 
 async function BlogPost({ params }) {
   const blogPost = await loadBlogPost(params.postSlug);
+  if (!blogPost) {
+    notFound();
+  }
 
   return (
     <article className={styles.wrapper}>
